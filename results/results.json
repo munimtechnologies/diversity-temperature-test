@@ -1,0 +1,228 @@
+{
+ "prereg": "PREREG.md (diversity-temperature-test v0.1.0)",
+ "status": "ok",
+ "analysis": {
+  "n_levels": 79,
+  "bins_with_richness": [
+   "Tremadocian",
+   "Floian",
+   "Dapingian",
+   "Darriwilian",
+   "Sandbian",
+   "Katian",
+   "Hirnantian",
+   "Aeronian/Rhuddanian",
+   "Telychian",
+   "Sheinwoodian",
+   "Homerian",
+   "Gorstian",
+   "Ludfordian",
+   "Pridoli",
+   "Pragian/Lochkovian",
+   "Emsian",
+   "Eifelian",
+   "Givetian",
+   "Frasnian",
+   "Famennian",
+   "Tournaisian",
+   "Visean",
+   "Serpukhovian",
+   "Bashkirian",
+   "Moscovian",
+   "Kasimovian",
+   "Gzhelian",
+   "Asselian",
+   "Sakmarian",
+   "Artinskian",
+   "Kungurian",
+   "Roadian",
+   "Capitanian/Wordian",
+   "Wuchiapingian",
+   "Changhsingian",
+   "Induan",
+   "Anisian/Olenekian",
+   "Ladinian",
+   "Carnian",
+   "Norian",
+   "Rhaetian",
+   "Sinemurian/Hettangian",
+   "Pliensbachian",
+   "Toarcian",
+   "Aalenian",
+   "Bajocian",
+   "Bathonian",
+   "Callovian",
+   "Oxfordian",
+   "Kimmeridgian",
+   "Tithonian",
+   "Berriasian",
+   "Valanginian",
+   "Hauterivian",
+   "Barremian",
+   "Aptian",
+   "Albian",
+   "Cenomanian",
+   "Turonian",
+   "Coniacian",
+   "Santonian",
+   "Campanian",
+   "Maastrichtian",
+   "Selandian/Danian",
+   "Thanetian",
+   "Ypresian",
+   "Lutetian",
+   "Bartonian",
+   "Priabonian",
+   "Rupelian",
+   "Chattian",
+   "Aquitanian",
+   "Burdigalian",
+   "Langhian",
+   "Serravallian",
+   "Tortonian",
+   "Messinian",
+   "Zanclean",
+   "Piacenzian"
+  ],
+  "sanity": {
+   "n_ok": true,
+   "pt_drop": true,
+   "passed": true
+  },
+  "D1_levels": {
+   "n": 79,
+   "rho": -0.05925024342745862,
+   "p_perm": 0.6932653367331634,
+   "p_shift": 0.5733333333333334,
+   "n_shifts": 74,
+   "p_perm_lower": 0.3018849057547123,
+   "p_shift_lower": 0.44
+  },
+  "D2_differences": {
+   "n": 78,
+   "rho": 0.04978565738059407,
+   "p_perm": 0.3290835458227089,
+   "p_shift": 0.4594594594594595,
+   "n_shifts": 73,
+   "p_perm_lower": 0.6672166391680416,
+   "p_shift_lower": 0.5540540540540541
+  },
+  "D2b_differences_without_big_five": {
+   "n": 72,
+   "rho": 0.0714836967007525,
+   "p_perm": 0.2769361531923404,
+   "p_shift": 0.3088235294117647,
+   "n_shifts": 67,
+   "p_perm_lower": 0.7253137343132844,
+   "p_shift_lower": 0.7058823529411765
+  },
+  "D3_duration_partial": {
+   "n": 79,
+   "rho": -0.0884516490281125,
+   "p_perm": 0.7812609369531524
+  },
+  "D4_uncertainty": {
+   "n_draws": 2000,
+   "rho_p05": -0.13829965920155793,
+   "rho_median": -0.055647517039922115,
+   "rho_p95": 0.03076679649464456,
+   "frac_rho_pos": 0.14,
+   "frac_same_sign_as_D1": 0.86
+  },
+  "D5a_origination_vs_level": {
+   "n": 79,
+   "rho": 0.28174294060370014,
+   "p_perm": 0.005649717514124294,
+   "p_shift": 0.02666666666666667,
+   "n_shifts": 74,
+   "p_perm_lower": 0.9938003099845008,
+   "p_shift_lower": 0.9866666666666667
+  },
+  "D5b_origination_vs_change_in": {
+   "n": 78,
+   "rho": -0.07930044638905397,
+   "p_perm": 0.751612419379031,
+   "p_shift": 0.7567567567567568,
+   "n_shifts": 73,
+   "p_perm_lower": 0.2506874656267187,
+   "p_shift_lower": 0.25675675675675674
+  },
+  "D6_quorum": {
+   "R_0.5": {
+    "levels": {
+     "n": 79,
+     "rho": -0.1057935735150925,
+     "p_perm": 0.8277586120693965,
+     "p_shift": 0.6933333333333334,
+     "n_shifts": 74,
+     "p_perm_lower": 0.17934103294835257,
+     "p_shift_lower": 0.32
+    },
+    "differences": {
+     "n": 78,
+     "rho": 0.047003629282110305,
+     "p_perm": 0.3366331683415829,
+     "p_shift": 0.4189189189189189,
+     "n_shifts": 73,
+     "p_perm_lower": 0.655667216639168,
+     "p_shift_lower": 0.5945945945945946
+    }
+   },
+   "R_0.8": {
+    "levels": {
+     "n": 78,
+     "rho": 0.0027440913516862883,
+     "p_perm": 0.49217539123043846,
+     "p_shift": 0.4189189189189189,
+     "n_shifts": 73,
+     "p_perm_lower": 0.5094745262736863,
+     "p_shift_lower": 0.5945945945945946
+    },
+    "differences": {
+     "n": 76,
+     "rho": 0.04738209159261791,
+     "p_perm": 0.34093295335233237,
+     "p_shift": 0.4027777777777778,
+     "n_shifts": 71,
+     "p_perm_lower": 0.6576171191440427,
+     "p_shift_lower": 0.6111111111111112
+    }
+   },
+   "same_signs": false
+  },
+  "D7_raw_levels": {
+   "n": 79,
+   "rho": -0.006231742940603673,
+   "p_perm": 0.5220738963051847,
+   "p_shift": 0.4,
+   "n_shifts": 74,
+   "p_perm_lower": 0.47652617369131545,
+   "p_shift_lower": 0.6133333333333333
+  },
+  "D7_raw_below_standardised": false,
+  "D7_collections_levels": {
+   "n": 79,
+   "rho": 0.13641674780915292,
+   "p_perm": 0.1111944402779861,
+   "p_shift": 0.3333333333333333,
+   "n_shifts": 74,
+   "p_perm_lower": 0.8870056497175142,
+   "p_shift_lower": 0.68
+  },
+  "signals": {
+   "D1_pos": false,
+   "D1_neg": false,
+   "D2_pos": false,
+   "D2_neg": false
+  },
+  "decision": "NOT_SUPPORTED",
+  "qualifiers": {
+   "D2_autocorrelation_robust": false,
+   "D2_without_big_five_same_sign": true,
+   "D1_duration_same_sign": true,
+   "D1_uncertainty_robust": false,
+   "quorum_robust": false
+  }
+ },
+ "decision": "NOT_SUPPORTED"
+}

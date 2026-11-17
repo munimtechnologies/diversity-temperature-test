@@ -19,16 +19,22 @@ affects long-term global diversity. This repository tests the claim on two input
 The hypotheses, priors and decision rule were fixed in [PREREG.md](PREREG.md) before any
 richness value was computed.
 
+## Result (2026-11-17): NOT_SUPPORTED
+
+See **[RESULTS.md](RESULTS.md)**. Over 79 bins, coverage-standardised genus richness does not
+track PhanDA temperature, in levels (rho = -0.06) or in changes (rho = +0.05), at any
+registered quorum or with the Big Five removed. One registered side-row holds: origination
+is higher in warmer intervals (rho = 0.28, circular-shift p = 0.027), a lead for a separate
+test. The grader was published before the result existed; `test_graded_results.py` re-runs it
+on the published output.
+
 ## Status
 
-- 2026-11-17: pre-registered. The analysis job is queued. Results will appear in
-  RESULTS.md whatever the outcome.
+- 2026-11-17: pre-registered.
 - 2026-11-17 (later): the reading of the result was fixed in code before any result existed:
   [grade_diversity.py](grade_diversity.py) (tests: `test_grade_diversity.py`). See
-  [PRE-RESULT-NOTE-1.md](PRE-RESULT-NOTE-1.md). It explains the reading choices and why no
-  registered prediction could be computed from public data in advance. It also explains how
-  strict the circular-shift test is: with about 79 bins, p_shift < 0.05 needs the observed
-  correlation to beat all but at most 2 of the 74 shifted copies.
+  [PRE-RESULT-NOTE-1.md](PRE-RESULT-NOTE-1.md).
+- 2026-11-17 (evening): the job ran and the result was graded: [RESULTS.md](RESULTS.md).
 
 ## Part of a series: what drives the history of life?
 
@@ -37,6 +43,8 @@ richness value was computed.
 - [extinction-temperature-test](https://github.com/munimtechnologies/extinction-temperature-test):
   does temperature change predict extinction (Song et al. 2021, the 5.2 C threshold)?
 - this repository: does diversity itself track temperature?
+- All five tests read together:
+  [SYNTHESIS.md](https://github.com/munimtechnologies/extinction-cycle-test/blob/main/SYNTHESIS.md).
 
 ## Run it
 
@@ -63,6 +71,9 @@ times). The grader writes `out/graded.json` and `out/GRADED.md`.
   hand check). Standard library only.
 - `test_diversity.py`, `test_grade_diversity.py`: offline tests, including a
   hand-enumerated rarefaction case, planted-signal checks and every grading rule.
+- `RESULTS.md`, `results/`: the graded result and the job's output files.
+- `test_graded_results.py`: runs the grader on `results/` and checks it gives the label and
+  row grades in RESULTS.md.
 
 Data: the Paleobiology Database (CC BY 4.0) and PhanDA (Judd et al. 2024, CC BY 4.0).
 
