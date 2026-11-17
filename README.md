@@ -23,6 +23,12 @@ richness value was computed.
 
 - 2026-11-17: pre-registered. The analysis job is queued. Results will appear in
   RESULTS.md whatever the outcome.
+- 2026-11-17 (later): the reading of the result was fixed in code before any result existed:
+  [grade_diversity.py](grade_diversity.py) (tests: `test_grade_diversity.py`). See
+  [PRE-RESULT-NOTE-1.md](PRE-RESULT-NOTE-1.md). It explains the reading choices and why no
+  registered prediction could be computed from public data in advance. It also explains how
+  strict the circular-shift test is: with about 79 bins, p_shift < 0.05 needs the observed
+  correlation to beat all but at most 2 of the 74 shifted copies.
 
 ## Part of a series: what drives the history of life?
 
@@ -36,14 +42,15 @@ richness value was computed.
 
 ```
 pip install -r requirements.txt
-python -m unittest -v test_diversity
+python -m unittest -v test_diversity test_grade_diversity
 python job_diversity.py --data-dir data --out-dir out
+python grade_diversity.py --results out/results.json --bins out/bins.csv --out-dir out
 ```
 
 The job downloads eight PBDB occurrence CSVs (one per group, cached for later runs) and one PhanDA CSV. It writes
 `out/results.json` (every test), `out/bins.csv` (richness, coverage, origination and
 temperature per bin), `out/differences.csv` and `out/provenance.json` (URLs, md5s and
-times).
+times). The grader writes `out/graded.json` and `out/GRADED.md`.
 
 ## Files
 
@@ -52,8 +59,10 @@ times).
   with extinction-temperature-test.
 - `job_thermo.py`: downloads, shared with extinction-temperature-test.
 - `job_diversity.py`: the end-to-end job.
-- `test_diversity.py`: offline tests, including a hand-enumerated rarefaction case and
-  planted-signal checks.
+- `grade_diversity.py`: the registered reading (prior table, label, Brier score, PhanDA
+  hand check). Standard library only.
+- `test_diversity.py`, `test_grade_diversity.py`: offline tests, including a
+  hand-enumerated rarefaction case, planted-signal checks and every grading rule.
 
 Data: the Paleobiology Database (CC BY 4.0) and PhanDA (Judd et al. 2024, CC BY 4.0).
 
